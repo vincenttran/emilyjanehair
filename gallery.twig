@@ -1,0 +1,34 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<div class="bk-pt-prices">
+    <header class="bk-header">
+        <div class="header-bg">
+             <div class="wrapper companyheader clearfix">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            </div>
+        </div>
+        <nav class="navbar clearfix">
+           {{widget('extendednavigation', 'navigationheader', {})|raw}}
+        </nav>
+    </header>
+    
+    <div class="main-prices clearfix">
+        {{zone('main')|raw}}
+    </div>  
+    
+    <footer class="bk-footer">
+        <div class="wrapper clearfix">
+            <div class="responsivecolumns columns-two-50-50">
+                <div class="column columns-two-left">
+                    {{widget('profile', 'socialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
+                </div>
+                <div class="column columns-two-right">
+                    {{widget('profile', 'phone', { 'profileType':'phone', 'phone':'profile',    'refreshtime':'1800000'})|raw}}
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+{% endblock %}

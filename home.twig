@@ -1,0 +1,45 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<header class="bk-header">
+    <div class="header-bg">
+         <div class="wrapper companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        </div>
+    </div>
+    <nav class="navbar clearfix">
+       {{widget('extendednavigation', 'navigationheader', {})|raw}}
+    </nav>
+</header>
+
+<section>
+    {{widget('responsiveslideshow', 'responsiveslideshow',
+        {'duration':'5',
+            'transSpeed': '1500',
+            'transType': 'fade',
+            'showButtons': false,
+            'showBullets': false,
+            'allowPause': false,
+            'allowLoop': true,
+            'showDescription': true,
+            'showTitle': true,
+            'crop': true
+        })|raw
+    }}
+</section>
+
+<footer class="bk-footer">
+    <div class="wrapper clearfix">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+                {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
+            <div class="column columns-two-right">
+                {{widget('profile', 'phone', { 'profileType':'phone', 'phone':'profile', 'refreshtime':'1800000'})|raw}}
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}

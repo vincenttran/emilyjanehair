@@ -1,4 +1,3 @@
-emilyjanehair
-=============
+Emily Jane Extentions
 
-Emily Jane Hair Extensions Company
+Copyright 2014 Emily Jane, Vincent Tran & Basekit

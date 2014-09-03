@@ -1,0 +1,52 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<header class="bk-header">
+    <div class="header-bg">
+         <div class="wrapper companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        </div>
+    </div>
+    <nav class="navbar clearfix">
+       {{widget('extendednavigation', 'navigationheader', {})|raw}}
+    </nav>
+</header>
+
+<div class="aboutimage">
+</div>
+
+<div class="main-about clearfix">
+    <div class="responsivecolumns columns-two-50-50 wrapper">
+        <div class="column columns-two-left">
+            <div class="box">
+                {{widget('content', 'textwidgetbox2', {content: '<h4>ABOUT</h4>', lines: 'all'})|raw}}
+                {{widget('content', 'textwidgetbox3', {content: '<p>My name is Emily Jane and I am a Luxury Hair Extension Technician. I am fully insured and certified to apply all methods of extension and have built an excellent portfolio of hair extension fittings.</p>', lines: 'all'})|raw}}
+                    {{widget('content', 'textwidgetbox4', {content: '<p>I apply versatile, pre-bonded, Brazilian and Russian human hair only using non damaging methods such as the micro weft, micro bond, nano bond and copper tubes.</p>', lines: 'all'})|raw}}
+                    {{widget('content', 'textwidgetbox5', {content: '<p>Hair Extensions can be used to add length, volume, colour or texture to transform your hair into that desired look.</p>', lines: 'all'})|raw}}
+                <div class="feather">
+                    {{widget('image', 'thisunqiuewidgetname1', { 'src': asset('emilyjaneextensions/images/feather.jpg'), 'title': 'my image', 'alt': 'my image', 'fileName': 'feather.jpg', 'fileSize': '58kb', 'imageSize': '440 x 660', 'imageWidth': '90px'})|raw}}
+                </div>
+            </div>
+        </div>
+        <div class="column columns-two-right">
+            <a class="twitter-timeline" href="https://twitter.com/emilyjanehair" data-widget-id="489461595295064064">Tweets by @emilyjanehair</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    </div>
+</div>  
+
+<footer class="bk-footer">
+    <div class="wrapper clearfix">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+                {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
+            <div class="column columns-two-right">
+                {{widget('profile', 'phone', { 'profileType':'phone', 'phone':'profile', 'refreshtime':'1800000'})|raw}}
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}
